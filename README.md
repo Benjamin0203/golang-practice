@@ -11,3 +11,11 @@
 ---
 
 [Return random greeting](https://go.dev/doc/tutorial/random-greeting): import `math/rand` package and use `rand.Intn` function to return random greeting. In `hello.go` file we call `greetings.Hello` function with random greeting by running `go run .` command in terminal.
+
+---
+
+[get a map with multiple people](https://go.dev/doc/tutorial/greetings-multiple-people): in `greetings.go` file we create `Hellos` function that takes a slice of names and returns a map that associates each of those names with a greeting message. In `hello.go` file we call `greetings.Hellos` function with random greeting by running `go run .` command in terminal.
+
+---
+
+[Testings]()
