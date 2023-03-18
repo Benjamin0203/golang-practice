@@ -18,4 +18,36 @@
 
 ---
 
-[Testings]()
+[Testings](https://go.dev/doc/tutorial/add-a-test): Add two testing functions in `greetings_test.go` file. Run `go test` command in terminal to run the tests and see the failed tests only. Run `go test -v` command in terminal to run the tests and see all the tests.
+
+---
+
+[Build](https://go.dev/doc/tutorial/compile-install): Run `go build` command in terminal to build the executable file. Run `./hello` command in terminal to run the executable file.
+
+1. go to the file that contains `func main()` , in this example, our `hello.go` will be the file that needs to be built
+2. run command
+
+```bash
+go list -f '{{.Target}}'
+```
+
+to **get the Go install path**
+in this case we get path `/Users/ben/go/bin/hello`
+
+3. Add the**Go install directory** to your system's shell path.
+   **Note**: the path has `/bin` as the end and **no** `hello` file!
+   Like this:
+
+```bash
+export PATH=$PATH:/Users/ben/go/bin
+```
+
+4. run `go install`
+5. In whereever directory run `hello` command and you will get the same result as running `go run .` inside `/hello` directory:
+
+```bash
+─    ~/Fu/golangPractice/hello    main !1 ─────── ✔  01:04:29 am  ─╮
+╰─ hello                                                                     ─╯
+Great to see you, Gladys!
+map[Darrin:Hail, Darrin! Well met! Gladys:Great to see you, Gladys! Samantha:Hail, Samantha! Well met!]
+```
